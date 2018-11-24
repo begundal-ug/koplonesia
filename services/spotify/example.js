@@ -1,13 +1,13 @@
 const spotifyFeatures = require('./getFeatures');
 
-const songs = [
+const nellaSongs = [
 	'Aku Cah Kerjo',
 	'Ambilkan Gelas',
 	'Banyu Langit',
 	'Bidadari Kesleo',
 	'Bojo Galak',
 	'Ditinggal Rabi',
-	'Gara Gara Asmara (NS)',
+	'Gara Gara Asmara',
 	'Jaran Goyang',
 	'Juragan Empang',
 	'Kau Tercipta Bukan Untukku',
@@ -26,6 +26,34 @@ const songs = [
 	'Tak Bisa Membenci',
 ];
 
-songs.forEach(song => {
+const viaSongs = [
+	'Bagai Langit Dan Bumi',
+	'Berkali Kali',
+	'Bojo Galak',
+	'Kau Selalu Dihatiku',
+	'Kekasih Bayangan',
+	'Kepelet Sayang',
+	'Kimcil Kepolen',
+	'Lali Rasane Tresno',
+	'Lanangan Ra Mutu',
+	'Masih Cinta',
+	'Meraih Bintang',
+	'Ngelabur Langit',
+	'Ngukir Sandiworo',
+	'Nikah Siri',
+	'Ora Masalah',
+	'Pikir Keri',
+	'Pintu Surga',
+	'Ra Jodo',
+	'Sayang',
+	'Sayangen Aku',
+	'Selingkuh',
+	'Tresnane Wong Kere',
+];
+
+nellaSongs.forEach(song => {
 	spotifyFeatures('Nella Kharisma', song).then(console.log).catch(console.error)
+});
+viaSongs.forEach(song => {
+	spotifyFeatures('Via Vallen', song).then(console.log).catch(console.error)
 });
