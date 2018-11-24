@@ -5,25 +5,28 @@
   "main": "index.js",
   "repository": "https://github.com/begundal-ug/koplonesia.git",
   "contributors": [
-  	{
-  		"name": "Achmad Mahardi",
-  		"email": "achmad@mahardi.me"
-  	},
-  	{
-  		"name": "Ahmad Anshorimuslim Syuhada",
-  		"email": "ans4175@gmail.com"
-  	},
-  	{
-  		"name": "Ananta Pandu Wicaksana",
-  		"email": "anpandumail@gmail.com"
-  	}
+    {
+      "name": "Achmad Mahardi",
+      "email": "achmad@mahardi.me"
+    },
+    {
+      "name": "Ahmad Anshorimuslim Syuhada",
+      "email": "ans4175@gmail.com"
+    },
+    {
+      "name": "Ananta Pandu Wicaksana",
+      "email": "anpandumail@gmail.com"
+    }
   ],
   "license": "MIT",
   "private": true,
   "workspaces": [
-  	"pipelines/*",
-  	"scrapers/*",
-  	"services/*",
-  	"common/*"
-  ]
+    "pipelines/*",
+    "scrapers/*",
+    "services/*",
+    "common/*"
+  ],
+  "dependencies": {
+    "spotify-web-api-node": "^4.0.0"
+  }
 }
