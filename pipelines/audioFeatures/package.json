@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "audioFeatures services",
   "main": "index.js",
+  "author": "Ahmad Anshorimuslim Syuhada <ans4175@gmail.com>",
   "license": "MIT",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@koplonesia/secrets": "*"
   }

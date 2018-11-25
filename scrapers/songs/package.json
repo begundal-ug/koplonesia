@@ -1,0 +1,8 @@
+{
+  "name": "@koplonesia/scrapers-songs",
+  "version": "1.0.0",
+  "description": "list of scraping tools",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true
+}

@@ -3,7 +3,7 @@ const path = require('path');
 const {spotify} = require('@koplonesia/secrets');
 const artists = require('./artists');
 
-const DB_FILENAME = path.join(__dirname, 'artistdb.json');
+const DB_FILENAME = path.join(__dirname, '../../common/artist/artistdb.json');
 
 spotify.client.then(spotifyInstance => {
   Promise.all(artists.map(artist => spotifyInstance.searchArtists(artist)))
