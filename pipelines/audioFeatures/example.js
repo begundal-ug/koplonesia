@@ -1,4 +1,4 @@
-const spotifyFeatures = require('./getFeatures');
+const {byTrackInfo} = require('./getFeatures');
 
 const nellaSongs = [
   'Aku Cah Kerjo',
@@ -52,12 +52,12 @@ const viaSongs = [
 ];
 
 nellaSongs.forEach(song => {
-  spotifyFeatures('Nella Kharisma', song)
+  byTrackInfo('Nella Kharisma', song)
     .then(console.log)
     .catch(console.error);
 });
 viaSongs.forEach(song => {
-  spotifyFeatures('Via Vallen', song)
+  byTrackInfo('Via Vallen', song)
     .then(console.log)
     .catch(console.error);
 });

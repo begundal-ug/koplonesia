@@ -1,7 +1,7 @@
 {
-  "name": "@koplonesia/spotify",
+  "name": "@koplonesia/audioFeatures",
   "version": "1.0.0",
-  "description": "spotify services",
+  "description": "audioFeatures services",
   "main": "index.js",
   "license": "MIT",
   "private": true,

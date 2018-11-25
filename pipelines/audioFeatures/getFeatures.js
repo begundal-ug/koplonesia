@@ -1,8 +1,21 @@
 const {spotify} = require('@koplonesia/secrets');
-let spotifyAPI;
 
-module.exports = (trackArtist, trackName) =>
-  new Promise((res, rej) => {
+function byTrackId(trackId) {
+  let spotifyAPI;
+  return new Promise((res, rej) => {
+    spotify.client
+      .then(spotifyInstance => {
+        spotifyAPI = spotifyInstance;
+        return spotifyAPI.getAudioFeaturesForTrack(trackId);
+      })
+      .then(res)
+      .catch(rej);
+  });
+}
+
+function byTrackInfo(trackArtist, trackName) {
+  let spotifyAPI;
+  return new Promise((res, rej) => {
     spotify.client
       .then(spotifyInstance => {
         spotifyAPI = spotifyInstance;
@@ -32,3 +45,8 @@ module.exports = (trackArtist, trackName) =>
       })
       .catch(rej);
   });
+}
+
+module.exports = {
+  byTrackInfo,
+};
