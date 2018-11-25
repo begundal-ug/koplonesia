@@ -42,9 +42,12 @@
     ],
     "import/no-extraneous-dependencies": "warn",
     "react/jsx-filename-extension": "off",
-    "react/forbid-prop-types": [2, {
-      "forbid": ["any"]
-    }],
+    "react/forbid-prop-types": [
+      2,
+      {
+        "forbid": ["any"]
+      }
+    ],
     "react/no-multi-comp": "off",
     "react/jsx-uses-vars": 1,
     "react/sort-comp": [
