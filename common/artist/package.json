@@ -1,0 +1,15 @@
+{
+  "name": "@koplonesia/artist",
+  "version": "1.0.0",
+  "description": "Koplonesia artist",
+  "main": "index.js",
+  "author": "Achmad Mahardi <achmad@mahardi.me>",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "@koplonesia/secrets": "*"
+  },
+  "scripts": {
+    "update-artists": "node scraper.js"
+  }
+}
