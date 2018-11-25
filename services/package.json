@@ -1,8 +1,0 @@
-{
-  "name": "@koplonesia/services",
-  "version": "1.0.0",
-  "description": "services packages",
-  "main": "index.js",
-  "license": "MIT",
-  "private": true
-}
