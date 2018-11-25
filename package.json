@@ -5,25 +5,54 @@
   "main": "index.js",
   "repository": "https://github.com/begundal-ug/koplonesia.git",
   "contributors": [
-  	{
-  		"name": "Achmad Mahardi",
-  		"email": "achmad@mahardi.me"
-  	},
-  	{
-  		"name": "Ahmad Anshorimuslim Syuhada",
-  		"email": "ans4175@gmail.com"
-  	},
-  	{
-  		"name": "Ananta Pandu Wicaksana",
-  		"email": "anpandumail@gmail.com"
-  	}
+    {
+      "name": "Achmad Mahardi",
+      "email": "achmad@mahardi.me"
+    },
+    {
+      "name": "Ahmad Anshorimuslim Syuhada",
+      "email": "ans4175@gmail.com"
+    },
+    {
+      "name": "Ananta Pandu Wicaksana",
+      "email": "anpandumail@gmail.com"
+    }
   ],
   "license": "MIT",
   "private": true,
   "workspaces": [
-  	"pipelines/*",
-  	"scrapers/*",
-  	"services/*",
-  	"common/*"
-  ]
+    "pipelines/*",
+    "scrapers/*",
+    "services/*",
+    "common/*"
+  ],
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.9.0",
+    "eslint-config-prettier": "^3.3.0",
+    "eslint-config-problems": "^1.1.0",
+    "eslint-plugin-flowtype": "^3.2.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-prettier": "^3.0.0",
+    "eslint-plugin-react": "^7.11.1",
+    "husky": "^1.2.0",
+    "lint-staged": "^8.1.0",
+    "prettier": "^1.15.2",
+    "prettier-eslint": "^8.8.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{json,css,md}": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.{js, jsx}": [
+      "eslint --fix",
+      "git add"
+    ]
+  }
 }
