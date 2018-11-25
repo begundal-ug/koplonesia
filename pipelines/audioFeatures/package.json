@@ -1,0 +1,11 @@
+{
+  "name": "@koplonesia/audioFeatures",
+  "version": "1.0.0",
+  "description": "audioFeatures services",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "@koplonesia/secrets": "*"
+  }
+}

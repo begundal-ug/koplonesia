@@ -1,4 +1,5 @@
 const Spotify = require('spotify-web-api-node');
+// using my very own account app (ans4175)
 const auth = {
   clientId: 'a5f3224f62bd482c8f5d6217d77b8f60',
   clientSecret: '366b68297f624a43b2a13fbe95d193db',
