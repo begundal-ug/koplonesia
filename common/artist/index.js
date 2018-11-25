@@ -9,26 +9,44 @@ const db = artists.reduce((prev, curr) => {
   return [...prev, result];
 }, []);
 
-module.exports = {
+function normalizer(artistName) {
+  return artistName
+    .toLowerString()
+    .split(' ')
+    .join('-');
+}
+
+class Artist {
+  constructor(normalizerFunction = normalizer) {
+    this.normalizer = normalizerFunction;
+    this.db = db;
+  }
+
   getAll() {
-    return db;
-  },
+    return this.db;
+  }
   getAllNormalized() {
-    return db.map(entry => ({
-      artist: entry.artist
-        .toLowerString()
-        .split(' ')
-        .join('-'),
+    return this.db.map(entry => ({
+      artist: this.normalizer(entry.artist),
       spotifyId: entry.spotifyId,
     }));
-  },
-  getAllArtists() {
-    return db.map(entry => entry.artist);
-  },
-  getAllSpotifyId() {
-    return db.map(entry => entry.spotifyId);
-  },
+  }
+
+  getNames() {
+    return this.db.map(entry => entry.artist);
+  }
+
+  getNamesNormalized() {
+    return this.db.map(entry => this.normalizer(entry.artist));
+  }
+
+  getSpotifyIds() {
+    return this.db.map(entry => entry.spotifyId);
+  }
+
   findBySpotifyId(spotifyId) {
-    return db.find(entry => entry.spotifyId === spotifyId);
-  },
-};
+    return this.db.find(entry => entry.spotifyId === spotifyId);
+  }
+}
+
+module.exports = Artist;
