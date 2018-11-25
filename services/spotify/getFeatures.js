@@ -1,35 +1,34 @@
-const SpotifyWebApi = require('spotify-web-api-node');
+const {spotify} = require('@koplonesia/secrets');
+let spotifyAPI;
 
-// using my very own account app (ans4175)
-const spotifyApi = new SpotifyWebApi({
-  clientId: 'a5f3224f62bd482c8f5d6217d77b8f60',
-  clientSecret: '366b68297f624a43b2a13fbe95d193db'
-});
-
-module.exports = (trackArtist, trackName) => {
-  return new Promise((res, rej) => {
-    spotifyApi
-      .clientCredentialsGrant()
-      .then(function(data) {
-        // Set the access token on the API object so that it's used in all future requests
-        spotifyApi.setAccessToken(data.body['access_token']);
-        return spotifyApi.searchTracks(`track:${trackName} artist:${trackArtist}`)
+module.exports = (trackArtist, trackName) =>
+  new Promise((res, rej) => {
+    spotify.client
+      .then(spotifyInstance => {
+        spotifyAPI = spotifyInstance;
+        return spotifyAPI.searchTracks(
+          `track:${trackName} artist:${trackArtist}`
+        );
       })
-      .then(function(data) {
+      .then(data => {
         if (typeof data.body.tracks.items[0] !== 'undefined') {
-          console.log('[GET]', data.body.tracks.items[0].name, data.body.tracks.items[0].id);
-          return spotifyApi.getAudioFeaturesForTrack(data.body.tracks.items[0].id)
-        } else {
-          throw new Error(`Not found track:${trackName} artist:${trackArtist}`);
+          console.log(
+            '[GET]',
+            data.body.tracks.items[0].name,
+            data.body.tracks.items[0].id
+          );
+          return spotifyAPI.getAudioFeaturesForTrack(
+            data.body.tracks.items[0].id
+          );
         }
+        throw new Error(`Not found track:${trackName} artist:${trackArtist}`);
       })
-      .then(function(data) {
+      .then(data => {
         res({
           ...data.body,
           trackName,
-          trackArtist
+          trackArtist,
         });
       })
       .catch(rej);
-  })  
-}
+  });

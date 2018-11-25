@@ -1,3 +1,5 @@
-const spotifyFeatures = require('./getFeatures');
+const getFeatures = require('./getFeatures');
 
-console.log('main index')
+module.exports = {
+  getFeatures,
+};

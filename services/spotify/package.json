@@ -1,0 +1,11 @@
+{
+  "name": "@koplonesia/spotify",
+  "version": "1.0.0",
+  "description": "spotify services",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "@koplonesia/secrets": "*"
+  }
+}

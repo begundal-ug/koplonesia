@@ -1,1 +1,1 @@
-console.log('hentak hentak juos')
+console.log('hentak hentak juos');
