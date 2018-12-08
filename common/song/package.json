@@ -1,0 +1,9 @@
+{
+  "name": "@koplonesia/song",
+  "version": "1.0.0",
+  "description": "Koplonesia song",
+  "main": "index.js",
+  "author": "Anshori <ans4175@gmail.com>",
+  "license": "MIT",
+  "private": false
+}
