@@ -5,11 +5,5 @@
   "main": "index.js",
   "author": "Achmad Mahardi <achmad@mahardi.me>",
   "license": "MIT",
-  "private": false,
-  "dependencies": {
-    "@koplonesia/secrets": "*"
-  },
-  "scripts": {
-    "update-artists": "node scraper.js"
-  }
+  "private": false
 }
