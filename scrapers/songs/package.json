@@ -1,0 +1,17 @@
+{
+  "name": "@koplonesia/scrapers-songs",
+  "version": "1.0.0",
+  "description": "list of scraping tools",
+  "main": "index.js",
+  "license": "MIT",
+  "private": false,
+  "author": "Ahmad Anshorimuslim Syuhada <ans4175@gmail.com>",
+  "dependencies": {
+    "@koplonesia/artist": "*",
+    "@koplonesia/secrets": "*",
+    "js-promise-queue": "^1.1.0"
+  },
+  "scripts": {
+    "update-songs": "node index.js"
+  }
+}

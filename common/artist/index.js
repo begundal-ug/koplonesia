@@ -11,7 +11,7 @@ const db = artists.reduce((prev, curr) => {
 
 function normalizer(artistName) {
   return artistName
-    .toLowerString()
+    .toLowerCase()
     .split(' ')
     .join('-');
 }
