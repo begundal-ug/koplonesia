@@ -49,4 +49,5 @@ function byTrackInfo(trackArtist, trackName) {
 
 module.exports = {
   byTrackInfo,
+  byTrackId,
 };

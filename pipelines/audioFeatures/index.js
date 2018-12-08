@@ -1,5 +1,5 @@
-const getFeatures = require('./getFeatures');
+const getSongFeatures = require('./getSongFeatures');
 
 module.exports = {
-  getFeatures,
+  getSongFeatures,
 };
