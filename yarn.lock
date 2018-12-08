@@ -1666,6 +1666,11 @@ jest-validate@^23.5.0:
     leven "^2.1.0"
     pretty-format "^23.6.0"
 
+js-promise-queue@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/js-promise-queue/-/js-promise-queue-1.1.0.tgz#3f8cc451a79110699bbf673ed5468223dbd6c56d"
+  integrity sha512-cPGuny7ogxJ8StsPKMxcWC4d6g5xngiYgbtVXitksYIsKM05KBKLzZLxMr7rWTulCp0wEcJ8Nh973z4Do1I2lg==
+
 "js-tokens@^3.0.0 || ^4.0.0", js-tokens@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/js-tokens/-/js-tokens-4.0.0.tgz#19203fb59991df98e3a287050d4647cdeaf32499"
