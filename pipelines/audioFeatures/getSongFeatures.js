@@ -1,21 +1,25 @@
 const {spotify} = require('@koplonesia/secrets');
 
 function byTrackId(trackId) {
-  let spotifyAPI;
-  return new Promise((res, rej) => {
+  return new Promise((resolve, reject) => {
     spotify.client
       .then(spotifyInstance => {
-        spotifyAPI = spotifyInstance;
-        return spotifyAPI.getAudioFeaturesForTrack(trackId);
+        console.log('[GET]', trackId);
+        return spotifyInstance.getAudioFeaturesForTrack(trackId);
       })
-      .then(res)
-      .catch(rej);
+      .then(result => {
+        resolve(result.body);
+      })
+      .catch(error => {
+        console.error(error);
+        reject(error);
+      });
   });
 }
 
 function byTrackInfo(trackArtist, trackName) {
   let spotifyAPI;
-  return new Promise((res, rej) => {
+  return new Promise((resolve, reject) => {
     spotify.client
       .then(spotifyInstance => {
         spotifyAPI = spotifyInstance;
@@ -37,13 +41,13 @@ function byTrackInfo(trackArtist, trackName) {
         throw new Error(`Not found track:${trackName} artist:${trackArtist}`);
       })
       .then(data => {
-        res({
+        resolve({
           ...data.body,
           trackName,
           trackArtist,
         });
       })
-      .catch(rej);
+      .catch(reject);
   });
 }
 
