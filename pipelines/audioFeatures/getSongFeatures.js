@@ -1,17 +1,18 @@
 const {spotify} = require('@koplonesia/secrets');
 
 function byTrackId(trackId) {
+  let spotifyAPI;
   return new Promise((resolve, reject) => {
     spotify.client
       .then(spotifyInstance => {
+        spotifyAPI = spotifyInstance;
         console.log('[GET]', trackId);
-        return spotifyInstance.getAudioFeaturesForTrack(trackId);
+        return spotifyAPI.getAudioFeaturesForTrack(trackId);
       })
       .then(result => {
         resolve(result.body);
       })
       .catch(error => {
-        console.error(error);
         reject(error);
       });
   });

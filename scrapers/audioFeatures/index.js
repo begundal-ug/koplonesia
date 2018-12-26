@@ -27,8 +27,21 @@ function getArtistFeatures(artistName) {
     song.loadArtist(artistName);
     const pickedSongs = song.getAllSongs();
     console.log('START SONGS:', artistName);
-    promiseQueue(pickedSongs, song =>
-      getSongFeatures.byTrackId(song.spotifyTrackID)
+    promiseQueue(
+      pickedSongs,
+      song =>
+        new Promise(resolve => {
+          getSongFeatures
+            .byTrackId(song.spotifyTrackID)
+            .then(res => {
+              resolve({
+                ...res,
+                artist: artistName,
+                track_name: song.song,
+              });
+            })
+            .catch(console.error);
+        })
     )
       .then(results => {
         console.log('FINISH SONGS:', artistName, results.length);
