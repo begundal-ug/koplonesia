@@ -1,4 +1,4 @@
-const {byTrackInfo} = require('./getFeatures');
+const {byTrackInfo} = require('./getSongFeatures');
 
 const nellaSongs = [
   'Aku Cah Kerjo',
@@ -56,6 +56,7 @@ nellaSongs.forEach(song => {
     .then(console.log)
     .catch(console.error);
 });
+
 viaSongs.forEach(song => {
   byTrackInfo('Via Vallen', song)
     .then(console.log)

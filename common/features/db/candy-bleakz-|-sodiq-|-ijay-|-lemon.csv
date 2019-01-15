@@ -1,0 +1,2 @@
+"danceability","energy","key","loudness","mode","speechiness","acousticness","instrumentalness","liveness","valence","tempo","type","id","uri","track_href","analysis_url","duration_ms","time_signature","artist","track_name"
+0.93,0.886,7,-3.283,0,0.096,0.367,0,0.0693,0.814,111.966,audio_features,1jpcn6gih8DCN6AtYqofMI,spotify:track:1jpcn6gih8DCN6AtYqofMI,https://api.spotify.com/v1/tracks/1jpcn6gih8DCN6AtYqofMI,https://api.spotify.com/v1/audio-analysis/1jpcn6gih8DCN6AtYqofMI,218293,4,candy-bleakz-|-sodiq-|-ijay-|-lemon,Snooker

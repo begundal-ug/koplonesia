@@ -1,0 +1,9 @@
+{
+  "name": "@koplonesia/audio-features",
+  "version": "1.0.0",
+  "description": "Koplonesia audio features",
+  "main": "index.js",
+  "author": "Anshori <ans4175@gmail.com>",
+  "license": "MIT",
+  "private": false
+}
